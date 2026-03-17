@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Harrika & Teja - Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Great+Vibes&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css?v=24">
+</head>
+<body>
+    <!-- Landing Page - The Letter -->
+    <section id="landing" class="section landing">
+        <div class="background-overlay"></div>
+        <div class="envelope-container">
+            <div class="envelope">
+                <!-- Back of envelope -->
+                <div class="envelope-back"></div>
+                
+                <!-- Letter inside -->
+                <div class="letter">
+                    <div class="letter-content">
+                        <p class="letter-text">You are cordially invited!</p>
+                    </div>
+                </div>
+                
+                <!-- Front pocket of envelope -->
+                <div class="envelope-pocket"></div>
+                
+                <!-- Top flap that opens -->
+                <div class="envelope-flap"></div>
+                
+                <!-- Wax seal -->
+                <div class="seal" id="seal">
+                    <div class="seal-drips">
+                        <div class="drip drip-1"></div>
+                        <div class="drip drip-2"></div>
+                        <div class="drip drip-3"></div>
+                        <div class="drip drip-4"></div>
+                        <div class="drip drip-5"></div>
+                    </div>
+                    <div class="seal-inner">
+                        <span class="seal-letters">H<span class="seal-ampersand">&</span>T</span>
+                    </div>
+                </div>
+                
+                <p class="click-hint">Click to Open</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content (Hidden until envelope opens) -->
+    <div id="main-content" class="main-content">
+        <!-- Save the Date Section -->
+        <section id="save-the-date" class="section save-the-date">
+            <div class="background-overlay"></div>
+            <div class="content-wrapper">
+                <div class="decorative-line horizontal top"></div>
+                <h1 class="save-date-title">Save the Date</h1>
+                <div class="decorative-flourish">❧</div>
+                <div class="decorative-line horizontal bottom"></div>
+            </div>
+            <div class="scroll-indicator">
+                <span class="scroll-text">Scroll</span>
+                <div class="scroll-arrow">❮</div>
+            </div>
+        </section>
+
+        <!-- Calendar Section -->
+        <section id="calendar-section" class="section calendar-section">
+            <div class="background-overlay"></div>
+            <div class="content-wrapper">
+                <p class="families-text">TOGETHER WITH THEIR FAMILIES</p>
+                
+                <div class="names-container">
+                    <div class="decorative-line-side left">
+                        <span class="line-ornament">✦</span>
+                        <span class="line"></span>
+                    </div>
+                    <h2 class="couple-names">Harrika & Teja</h2>
+                    <div class="decorative-line-side right">
+                        <span class="line"></span>
+                        <span class="line-ornament">✦</span>
+                    </div>
+                </div>
+                
+                <p class="invite-text">ARE DELIGHTED TO INVITE YOU TO THEIR WEDDING</p>
+                
+                <div class="vertical-line-transform"></div>
+                
+                <div class="calendar-container">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <span class="calendar-nav">❮</span>
+                            <span class="calendar-month">May 2026</span>
+                            <span class="calendar-nav">❯</span>
+                        </div>
+                        <div class="calendar-weekdays">
+                            <span>SUN</span>
+                            <span>MON</span>
+                            <span>TUE</span>
+                            <span>WED</span>
+                            <span>THU</span>
+                            <span>FRI</span>
+                            <span>SAT</span>
+                        </div>
+                        <div class="calendar-days" id="calendar-days">
+                            <!-- Days will be generated by JS -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="countdown-container">
+                    <h3 class="countdown-title">COUNTDOWN</h3>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">000</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Plan Section -->
+        <section id="plan-section" class="section plan-section">
+            <div class="background-overlay"></div>
+            <div class="content-wrapper">
+                <h2 class="plan-title">The Plan</h2>
+                <div class="decorative-line horizontal"></div>
+                
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Sangeet - Left -->
+                    <div class="timeline-event left">
+                        <div class="event-content">
+                            <div class="event-datetime">13th May · 7:00 PM</div>
+                            <div class="event-line"></div>
+                            <div class="event-name">SANGEET</div>
+                            <div class="event-description">An evening of music & dance</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dinner - Right -->
+                    <div class="timeline-event right">
+                        <div class="event-content">
+                            <div class="event-datetime">13th May · 8:30 PM</div>
+                            <div class="event-line"></div>
+                            <div class="event-name">DINNER</div>
+                            <div class="event-description">Join us for a delightful feast</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Muhurtam - Left -->
+                    <div class="timeline-event left">
+                        <div class="event-content">
+                            <div class="event-datetime">14th May · 9:00 AM</div>
+                            <div class="event-line"></div>
+                            <div class="event-name">MUHURTAM</div>
+                            <div class="event-description">The sacred wedding ceremony</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Breakfast - Right -->
+                    <div class="timeline-event right">
+                        <div class="event-content">
+                            <div class="event-datetime">14th May · 11:00 AM</div>
+                            <div class="event-line"></div>
+                            <div class="event-name">BREAKFAST</div>
+                            <div class="event-description">A warm morning gathering</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details Section -->
+        <section id="details-section" class="section details-section">
+            <div class="background-overlay"></div>
+            <div class="content-wrapper">
+                <h2 class="details-title">The Details</h2>
+                <div class="decorative-line horizontal"></div>
+                
+                <div class="location-container">
+                    <h3 class="section-subtitle">LOCATION</h3>
+                    <div class="location-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M32 56 C32 56 52 36 52 24 C52 12 43 4 32 4 C21 4 12 12 12 24 C12 36 32 56 32 56Z"/>
+                            <circle cx="32" cy="24" r="8"/>
+                        </svg>
+                    </div>
+                    <p class="location-name">PUSHPA RAJ FUNCTION HALL</p>
+                    <p class="location-address">Near Rajiv Gruhakalpa</p>
+                    <p class="location-city">KURNOOL</p>
+                </div>
+                
+                <div class="decorative-line horizontal short"></div>
+                
+                <div class="rsvp-container">
+                    <h3 class="section-subtitle">R S V P</h3>
+                    <p class="rsvp-deadline">BY APRIL 25TH</p>
+                    
+                    <form class="rsvp-form" id="rsvp-form">
+                        <div class="form-group">
+                            <label for="guest-name">NAME</label>
+                            <input type="text" id="guest-name" name="name" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="guest-count">NUMBER OF GUESTS</label>
+                            <select id="guest-count" name="guests" required>
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="10+">10+</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="rsvp-submit">
+                            <span>Count Me In!</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="footer-flourish">
+                    <span>❧</span>
+                    <span class="footer-text">We can't wait to celebrate with you!</span>
+                    <span>❧</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js?v=16"></script>
+</body>
+</html>
