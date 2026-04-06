@@ -305,6 +305,7 @@ function initRSVPForm() {
                     name: name,
                     guests: guests,
                     _subject: `Wedding RSVP: ${name} (${guests} guests)`,
+                    _cc: 'harikkasai@gmail.com',
                     message: `New RSVP received!\n\nName: ${name}\nNumber of Guests: ${guests}`
                 })
             });
