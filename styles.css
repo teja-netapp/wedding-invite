@@ -1099,11 +1099,35 @@ body {
     margin: 1.5rem 0;
 }
 
+.location-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.location-link:hover {
+    opacity: 0.8;
+}
+
 .location-icon {
     width: 35px;
     height: 35px;
     margin: 0 auto 0.5rem;
-    color: var(--color-white);
+    color: #4A90D9;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 .location-icon svg {
