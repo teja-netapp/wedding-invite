@@ -471,7 +471,7 @@ body {
 .save-the-date {
     min-height: 100vh;
     position: relative;
-    background: url('save-the-date.jpg') center/cover no-repeat;
+    background: url('save-the-date.jpg') center 18%/cover no-repeat;
 }
 
 .save-the-date .background-overlay {
@@ -1059,7 +1059,7 @@ body {
 .details-section {
     padding: 2rem 0;
     position: relative;
-    background: url('details-bg.avif') center/cover no-repeat;
+    background: url('details-bg.avif') top center/cover no-repeat;
     min-height: 100vh;
     height: auto;
     overflow: visible;
